@@ -41,6 +41,7 @@ int EvenNumbers(int[] array)
     return even;
 }
 
-// 4. Console 
 int b = EvenNumbers(a);
+
+// 4. Console 
 Console.WriteLine($". Количество четных чисел = {b}");
