@@ -44,4 +44,5 @@ int EvenNumbers(int[] array)
 int b = EvenNumbers(a);
 
 // 4. Console 
-Console.WriteLine($". Количество четных чисел = {b}");
+Console.WriteLine();
+Console.WriteLine($"Количество четных чисел = {b}");

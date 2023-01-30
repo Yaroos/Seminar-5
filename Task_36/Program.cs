@@ -44,4 +44,5 @@ int SumOddNumbers(int[] array)
 int b = SumOddNumbers(a);
 
 // 4. Console
-Console.WriteLine($". Сумма нечетных чисел = {b}");
+Console.WriteLine();
+Console.WriteLine($"Сумма нечетных чисел = {b}");
