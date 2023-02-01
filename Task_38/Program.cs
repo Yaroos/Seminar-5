@@ -27,13 +27,12 @@ void PrintArray(double [] array)
 PrintArray(a);
 
 // 3. Max and Min. 
-double MinMax(double [] array)
+double Min(double [] array)
 {
-    int min = 0;
-    int max = 0;
+    int min = (int)array[0];
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i] < array[i])
+        if(array[i] < min)
         {
             min = (int)array[i];
             Console.WriteLine(min);
@@ -42,5 +41,21 @@ double MinMax(double [] array)
     return min;
 }
 
-double b = MinMax(a);
+double Max(double [] array)
+{
+    int max = (int)array[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] > max)
+        {
+            max = (int)array[i];
+            Console.WriteLine(max);
+        }
+    }
+    return max;
+}
+
+double b = Min(a);
 Console.WriteLine(b);
+double c = Max(a);
+Console.WriteLine(c);
