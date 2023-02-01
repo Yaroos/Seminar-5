@@ -7,9 +7,11 @@ double [] CreateArray()
 {
     double [] Array = new double [8];
     Random number = new Random();
+    int minimum = -100;
+    int maximum = 100;
     for(double i = 0; i < Array.Length; i++)
     {
-        Array[(int)(double)i] = number.Next(1,999);
+        Array[(int)i] = number.NextDouble() * (maximum - minimum) + minimum;
     }
     return Array;
 } 
@@ -20,11 +22,12 @@ void PrintArray(double [] array)
 {
     for (double i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array [(int)i]} ");
+        Console.Write($"{array [(int)i]} + . ");
     }
 }
 
 PrintArray(a);
+Console.WriteLine();
 
 // 3. Max and Min. 
 double Min(double [] array)
@@ -35,7 +38,6 @@ double Min(double [] array)
         if(array[i] < min)
         {
             min = (int)array[i];
-            Console.WriteLine(min);
         }
     }
     return min;
@@ -49,13 +51,16 @@ double Max(double [] array)
         if(array[i] > max)
         {
             max = (int)array[i];
-            Console.WriteLine(max);
         }
     }
     return max;
 }
 
 double b = Min(a);
-Console.WriteLine(b);
+Console.WriteLine($"Минимальное число: {b}");
 double c = Max(a);
-Console.WriteLine(c);
+Console.WriteLine($"Максимальное число: {c}");
+
+// 4. Difference between max and min
+double result = c - b;
+Console.WriteLine($"Разница между максимальным и минимальным числом: {result}");
